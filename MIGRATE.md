@@ -4,7 +4,7 @@ Use this repo if you have a static Glitch site you want to deploy to Fastly Comp
 
 > **🚧 This project is an experiment in serving static sites built on Glitch from Fastly! With the Static Publisher, you can deploy an entire website to the network edge and serve it super fast from there to wherever your visitors are.**
 > 
-> **🚨 The container scripts in this repo will attempt to automate parts of the process for you, but they won't work across all Glitch websites because there are simply to many weird and wonderful variations to accommodate. 🌈 🛼 🪩**
+> **🚨 The container scripts in this repo will attempt to automate parts of the process for you, but they won't work across all Glitch websites because there are simply too many weird and wonderful variations to accommodate. 🌈 🛼 🪩**
 >
 > **We'd love your help making this resource helpful to more people, so please share problems, suggestions, and feedback, either here in the repo [Issues](https://github.com/glitchdotcom/glitch-static-site-to-fastly/issues) or on the [Fastly community forum](https://community.fastly.com). 📣**
 
