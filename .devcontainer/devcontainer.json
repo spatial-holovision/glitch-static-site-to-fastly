@@ -28,7 +28,7 @@
   },
   "updateContentCommand": "npm install",
   "postAttachCommand": {
-    "guide": "bash _migrate/welcome.sh",
+    "guide": "bash _migrate/guide.sh",
     "start": "npm run start",
     "build": "npm run build"
   },
@@ -73,13 +73,13 @@
             {
               "name": "🔗 Share",
               "singleInstance": true,
-              "command": "bash helpers/share.sh",
+              "command": "bash migrate/share.sh",
               "tooltip": "Grab a link to share your draft site"
             },
             {
               "name": "🚀 Publish",
               "singleInstance": true,
-              "command": "bash helpers/publish.sh",
+              "command": "bash migrate/publish.sh",
               "tooltip": "Publish your content to Fastly Compute"
             }
           ],
