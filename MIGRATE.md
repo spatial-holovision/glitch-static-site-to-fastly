@@ -75,7 +75,7 @@ The Codespace container scripts will attempt to build and run your site. Use the
 
 ![running local app](https://github.com/user-attachments/assets/5914cee9-de5d-4c42-91ed-fdf93cbf4b48)
 
-You'll find some helper buttons along the bottom of the editor that run scripts in the `_migrate` folder – you might need to tweak these commands depending on your website.
+You'll find some helper buttons along the bottom of the editor including **🚀 Publish** which runs a script in the `_migrate` folder – you might need to tweak these commands depending on your website.
 
 > 💫 _Using an older Glitch in Bio remix and seeing an endless reload? Remove the `server` object from your `vite.config.js` file and hopefully that'll sort it – this was an optimization we included for editing in Glitch._
 
@@ -87,11 +87,11 @@ Check your `build` folder for your output files. If they're there you're good to
 
 ### Sites with a different build process or output folder
 
-If you're having trouble getting the build process to complete, check out your project `package.json` file for the relevant commands to try, and any config files you have for the framework you're using, in case the output folder is named something different – if it is, change the `_migrate/publish.sh` script to point at the relevant folder instead of `build`.
+If you're having trouble getting the build process to complete, check out your project `package.json` file for the relevant commands to try, and any config files you have for the framework you're using, in case the output folder is named something different – if it is, change the `_migrate/publish.sh` and `_migrate/serve.sh` scripts to point at the relevant folder instead of `build`.
 
 ## Test your Compute app
 
-You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing using the script in `_migrate/serve.sh`. Change `build` in the script if your output folder is different and run it from the Terminal:
+You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing using the script in `_migrate/serve.sh`. Change `build` in the script if your output folder is different – run it from the Terminal:
 
 ```
 bash _migrate/serve.sh
