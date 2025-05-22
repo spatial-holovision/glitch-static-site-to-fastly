@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script runs when you click the Share button!
+# This script spins up a local test Compute app
 
 npm run build 
 npx --yes @fastly/compute-js-static-publish@latest --root-dir=./build --kv-store-name=website-content 
