@@ -99,6 +99,8 @@ npm run dev:publish
 npm run dev:start
 ```
 
+> ⚠️ _Note that you can only run the test server once per session in a Codespace because it'll attempt to reuse the same port number._
+
 The Fastly tooling will attempt to scaffold a new Compute app for your project and run it in the Codespace – it might take a couple of minutes but you should see a preview of your site open in the Codespace. 
 
 ![running test compute app](https://github.com/user-attachments/assets/f3c17565-4e42-449d-892f-8adc49e02c6c)
