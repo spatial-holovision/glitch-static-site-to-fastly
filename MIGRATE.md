@@ -91,6 +91,8 @@ If you're having trouble getting the build process to complete, check out your p
 
 Click the **🧪 Serve** button at the bottom of the Codespace to try building and running a Compute app to deliver your website.
 
+> ⚠️ You can only run the test server once per Codespace session, so it's best to use it as a final check right before you publish.
+
 The Fastly tooling will attempt to scaffold a new Compute app for your project and run it in the Codespace – it might take a couple of minutes but you should see a preview of your site open in the Codespace. 
 
 ![running test compute app](https://github.com/user-attachments/assets/f3c17565-4e42-449d-892f-8adc49e02c6c)
