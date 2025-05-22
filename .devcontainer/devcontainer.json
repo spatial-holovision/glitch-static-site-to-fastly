@@ -28,7 +28,7 @@
   },
   "updateContentCommand": "npm install",
   "postAttachCommand": {
-    "guide": "bash _migrate/guide.sh",
+    "guide": "bash _migrate/welcome.sh",
     "start": "npm run start",
     "build": "npm run build"
   },
