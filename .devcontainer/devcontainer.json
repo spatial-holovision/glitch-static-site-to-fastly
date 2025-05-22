@@ -36,13 +36,26 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "jkearins.action-buttons-ext@0.1.1"
+        "jkearins.action-buttons-ext@0.1.1",
+        "dbaeumer.vscode-eslint"
       ],
       "settings": {
+        "files.exclude": {
+          "package-lock.json": true,
+          ".gitignore": true,
+          "node_modules/": true
+        },
         "chat.sendElementsToChat.enabled": false,
         "editor.minimap.enabled": false,
         "actionButtons": {
           "commands": [
+            {
+              "name": "🌈 Prettify",
+              "singleInstance": true,
+              "useVsCodeApi": true,
+              "command": "editor.action.formatDocument",
+              "tooltip": "Tidy up your code"
+            },
             {
               "name": "💻 Terminal",
               "singleInstance": true,
@@ -58,15 +71,15 @@
               "tooltip": "Move your active tab to the side"
             },
             {
-              "name": "🧪 Serve",
+              "name": "🔗 Share",
               "singleInstance": true,
-              "command": "bash _migrate/serve.sh",
-              "tooltip": "Test your Fastly Compute app"
+              "command": "bash helpers/share.sh",
+              "tooltip": "Grab a link to share your draft site"
             },
             {
               "name": "🚀 Publish",
               "singleInstance": true,
-              "command": "bash _migrate/publish.sh",
+              "command": "bash helpers/publish.sh",
               "tooltip": "Publish your content to Fastly Compute"
             }
           ],
