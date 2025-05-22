@@ -71,7 +71,7 @@ Open your project in a GitHub Codespace by clicking **Code** on your new repo an
 
 The Codespace container scripts will attempt to build and run your site. Use the **🔎 Split** button to show the preview side by side with your files.
 
-![running local app](https://github.com/user-attachments/assets/4311816e-5cab-4207-addf-78cea7194823)
+![running local app](https://github.com/user-attachments/assets/5914cee9-de5d-4c42-91ed-fdf93cbf4b48)
 
 You'll find some helper buttons along the bottom of the editor that run scripts in the `_migrate` folder – you might need to tweak these commands depending on your website.
 
@@ -103,8 +103,6 @@ npm run dev:start
 
 The Fastly tooling will attempt to scaffold a new Compute app for your project and run it in the Codespace – it might take a couple of minutes but you should see a preview of your site open in the Codespace. 
 
-![running test compute app](https://github.com/user-attachments/assets/f3c17565-4e42-449d-892f-8adc49e02c6c)
-
 You should see the preview URL change to reflect the port number for your Compute app which will be `7676`.
 
 Your Compute app code will be in the `compute-js` folder, and the `fastly.toml` file will update with your Fastly service details as you execute the commands.
@@ -134,13 +132,13 @@ In the notifications area at the bottom right of your codespace, you should see 
 
 > You can alternatively add your API key in the repo **Settings** > **Secrets and variables** > **Codespaces**.
 
-![reload codespace](https://github.com/user-attachments/assets/b7a3271a-b183-44f2-82ed-968aa26f921e)
+![reload codespace](https://github.com/user-attachments/assets/54bd53b2-a8a6-43df-979b-2bed6a980bd8)
 
 > _When you reload your codespace you might see an error about a port already being in use – this happens in Vite projects like Glitch in Bio. You can fix it by removing the `server` object from your `vite.config.js` file, or you can just ignore it._ 💅
 
 Go ahead and click the **🚀 Publish** button at the bottom of the Codespace editor, confirm you want to proceed with a `y` and watch the Terminal for the output! 
 
-![follow link](https://github.com/user-attachments/assets/ed2c4a60-5d4e-4a0d-b06b-a6d7a6d45c70)
+![follow link](https://github.com/user-attachments/assets/72ab3767-aaa1-4fab-ab97-103b407ff400)
 
 Hopefully you see an `edgecompute.app` domain that returns your site – go ahead and open it!
 
