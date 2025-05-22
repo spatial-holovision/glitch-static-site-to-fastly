@@ -2,7 +2,7 @@
 
 Use this repo if you have a static Glitch site you want to deploy to Fastly Compute, like a **Glitch in Bio** or **Hello Eleventy** remix. We'll be using the [Static Publisher](https://github.com/fastly/compute-js-static-publish) tool with some helper scripts that run in a GitHub Codespace.
 
-> **🚧 This project is an experiment in serving static sites built on Glitch from Fastly! With the Static Publisher, you can deploy an entire website to the network edge and serve it super fast from there to wherever your visitors are.**
+> **🚧 This project is designed to help migrate static sites built on Glitch to Fastly! With the Static Publisher, you can deploy an entire website to the network edge and serve it super fast from there to wherever your visitors are.**
 > 
 > **🚨 The container scripts in this repo will attempt to automate parts of the process for you, but they won't work across all Glitch websites because there are simply too many weird and wonderful variations to accommodate. 🌈 🛼 🪩**
 >
@@ -10,16 +10,27 @@ Use this repo if you have a static Glitch site you want to deploy to Fastly Comp
 
 ## Set up your repo 
 
-* Fork the repo: [glitchdotcom/glitch-static-site-to-fastly](https://github.com/glitchdotcom/glitch-static-site-to-fastly/)
-* Download your Glitch project from the editor **Tools** menu: [Glitch help docs export guide](https://help.glitch.com/s/article/Downloading-Projects)
-* Unzip your downloaded app – remove some files that might appear in your export and could complicate subsequent steps, for example:
+You can use this repo by forking it and adding your downloaded Glitch project files, or by exporting your Glitch project to another repo and copying the files from here over to it. If you work on a fork of this repo it'll be easier to pull in any improvements we make to the migration code. 
+
+To work on a fork of this repo:
+
+* [Create your fork](https://github.com/glitchdotcom/glitch-static-site-to-fastly/)
+* [Download your Glitch project](https://help.glitch.com/s/article/Downloading-Projects)
+* Upload the Glitch project files into your fork
+  * This might be easier if you clone your forked repo locally and copy the downloaded files into it, then push your changes to GitHub
+
+To use the scripts from this project in a repo you exported from Glitch:
+
+* [Export your Glitch project to GitHub](https://help.glitch.com/s/article/Exporting-Projects-to-GitHub)
+* Copy the [`.devcontainer`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/.devcontainer) and [`_migrate`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/_migrate) folders and their contents into your repo (grab this file [`MIGRATE.md`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/blob/main/MIGRATE.md) as well if you want to read the steps in the Codespace)
+  * This also might be easier by cloning the repos locally and copying the files across
+
+> _If you're clever with git and comfortable on the command line there is likely a more convenient flow._
+
+In your downloaded / exported Glitch app, remove some files that might appear in your export and could complicate subsequent steps, for example:
   * `package-lock.json`
   * `shrinkwrap.yaml`
-  * _Check for any other files you think you can remove, including files beginning with `.` that may be hidden by default_
-* Add your Glitch project files to your new repo
-  * You might find this easiest by cloning your forked repo locally and copying the files over – remember to push your changes to GitHub
-
-> _You can alternatively export your Glitch project to GitHub and copy the files in `.devcontainer` and `_migrate` from this repo into yours, however that will be a little more awkward if we make improvements to the flow and you want to pull them into your repo._
+  * _Check for any other files you think you can remove, including those beginning with `.` that may be hidden by default_
 
 ### Static sites with no build process
 
@@ -67,7 +78,7 @@ If you uploaded images to Glitch through the Assets folder you’ll need to move
 
 ## Open your project in a Codespace
 
-Open your project in a GitHub Codespace by clicking **Code** on your new repo and creating a new codespace on your branch. 
+Open your repo in a GitHub Codespace by clicking **Code** on your new repo and creating a new codespace on your branch. 
 
 ![create codespace](https://github.com/user-attachments/assets/078484b0-af79-45e8-8f4f-4a3ef045b185)
 
