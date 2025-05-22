@@ -91,14 +91,10 @@ If you're having trouble getting the build process to complete, check out your p
 
 ## Test your Compute app
 
-You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing if you like, changing `build` if your output folder is different:
+You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing using the script in `_migrate/serve.sh`. Change `build` in the script if your output folder is different and run it from the Terminal:
 
 ```
-npm run build 
-npx --yes @fastly/compute-js-static-publish@latest --root-dir=./build --kv-store-name=website-content 
-cd compute-js 
-npm run dev:publish 
-npm run dev:start
+bash _migrate/serve.sh
 ```
 
 > ⚠️ _Note that you can only run the test server once per session in a Codespace because it'll attempt to reuse the same port number._
