@@ -85,11 +85,11 @@ Check your `build` folder for your output files. If they're there you're good to
 
 ### Sites with a different build process or output folder
 
-If you're having trouble getting the build process to complete, check out your project `package.json` file for the relevant commands to try, and any config files you have for the framework you're using, in case the output folder is named something different – if it is, change the `_migrate/serve.sh` and `_migrate/publish.sh` scripts to point at the relevant folder instead of `build`.
+If you're having trouble getting the build process to complete, check out your project `package.json` file for the relevant commands to try, and any config files you have for the framework you're using, in case the output folder is named something different – if it is, change the `_migrate/publish.sh` script to point at the relevant folder instead of `build`.
 
 ## Test your Compute app
 
-You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing if you like:
+You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing if you like, changing `build` if your output folder is different:
 
 ```
 npm run build 
@@ -144,7 +144,7 @@ Hopefully you see an `edgecompute.app` domain that returns your site – go ahea
 
 ![deployed app](https://github.com/user-attachments/assets/a6c2210b-bdf0-4256-bcd9-67052c15d9f9)
 
-> ⚠️ Note that if you go through this flow for more than one site you’ll need to change the KV Store name in your `_migrate` scripts to avoid duplicates – you also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names before deploying.
+> ⚠️ Note that if you go through this flow for more than one site you’ll need to change the KV Store name in your `_migrate/publish.sh` script to avoid duplicates – you also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names before deploying.
 
 ## Working on your project
 
