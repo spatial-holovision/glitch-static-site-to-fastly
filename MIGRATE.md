@@ -19,6 +19,8 @@ Use this repo if you have a static Glitch site you want to deploy to Fastly Comp
 * Add your Glitch project files to your new repo
   * You might find this easiest by cloning your forked repo locally and copying the files over – remember to push your changes to GitHub
 
+> _You can alternatively export your Glitch project to GitHub and copy the files in `.devcontainer` and `_migrate` from this repo into yours, however that will be a little more awkward if we make improvements to the flow and you want to pull them into your repo._
+
 ### Static sites with no build process
 
 If your site does not contain a `package.json` file, for example if it's a **Hello Website** remix, you'll need to add a couple of files to use a build process which will add your files to an output folder:
