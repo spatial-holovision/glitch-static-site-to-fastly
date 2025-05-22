@@ -89,9 +89,15 @@ If you're having trouble getting the build process to complete, check out your p
 
 ## Test your Compute app
 
-Click the **🧪 Serve** button at the bottom of the Codespace to try building and running a Compute app to deliver your website.
+You can try running the Compute app you'll be deploying to Fastly in the Codespace before publishing if you like:
 
-> ⚠️ You can only run the test server once per Codespace session, so it's best to use it as a final check right before you publish.
+```
+npm run build 
+npx --yes @fastly/compute-js-static-publish@latest --root-dir=./build --kv-store-name=website-content 
+cd compute-js 
+npm run dev:publish 
+npm run dev:start
+```
 
 The Fastly tooling will attempt to scaffold a new Compute app for your project and run it in the Codespace – it might take a couple of minutes but you should see a preview of your site open in the Codespace. 
 
