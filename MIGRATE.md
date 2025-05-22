@@ -17,15 +17,15 @@ To work on a fork of this repo:
 * [Create your fork](https://github.com/glitchdotcom/glitch-static-site-to-fastly/)
 * [Download your Glitch project](https://help.glitch.com/s/article/Downloading-Projects)
 * Upload the Glitch project files into your fork
-  * This might be easier if you clone your forked repo locally and copy the downloaded files into it, then push your changes to GitHub
+  * _This might be easiest if you clone your forked repo locally and copy the downloaded files into it, then push your changes to GitHub_
 
 To use the scripts from this project in a repo you exported from Glitch:
 
 * [Export your Glitch project to GitHub](https://help.glitch.com/s/article/Exporting-Projects-to-GitHub)
 * Copy the [`.devcontainer`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/.devcontainer) and [`_migrate`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/_migrate) folders and their contents into your repo (grab this file [`MIGRATE.md`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/blob/main/MIGRATE.md) as well if you want to read the steps in the Codespace)
-  * This also might be easier by cloning the repos locally and copying the files across
+  * _This might be easiest by cloning the repos locally and copying the files across too_
 
-> _If you're clever with git and comfortable on the command line there is likely a more convenient flow._
+> 💅 If you're clever with git and comfortable on the command line there is likely a more convenient flow.
 
 In your downloaded / exported Glitch app, remove some files that might appear in your export and could complicate subsequent steps, for example:
   * `package-lock.json`
@@ -34,7 +34,7 @@ In your downloaded / exported Glitch app, remove some files that might appear in
 
 ### Static sites with no build process
 
-If your site does not contain a `package.json` file, for example if it's a **Hello Website** remix, you'll need to add a couple of files to use a build process which will add your files to an output folder:
+If your site does not contain a `package.json` file, for example if it's a **Hello Website** remix, you'll need to add a couple of files to use a build process, which will add your website files to an output folder:
 
 Add a `package.json` file:
 
@@ -82,17 +82,17 @@ Open your repo in a GitHub Codespace by clicking **Code** on your new repo and c
 
 ![create codespace](https://github.com/user-attachments/assets/078484b0-af79-45e8-8f4f-4a3ef045b185)
 
-The Codespace container scripts will attempt to build and run your site. Use the **🔎 Split** button to show the preview side by side with your files.
+The Codespace container scripts will attempt to build and run your site. When the preview appears, use the **🔎 Split** button at the bottom to show it side by side with your files.
 
 ![running local app](https://github.com/user-attachments/assets/5914cee9-de5d-4c42-91ed-fdf93cbf4b48)
 
-You'll find some helper buttons along the bottom of the editor including **🚀 Publish** which runs a script in the `_migrate` folder – you might need to tweak these commands depending on your website.
+You'll find some other helper buttons along the bottom of the editor, including **🚀 Publish** which runs a script in the `_migrate` folder – you might need to tweak these commands depending on your website.
 
 > 💫 _Using an older Glitch in Bio remix and seeing an endless reload? Remove the `server` object from your `vite.config.js` file and hopefully that'll sort it – this was an optimization we included for editing in Glitch._
 
 ## Build your site locally
 
-In most cases you'll need your site output files to be in the `build` folder to deploy to Fastly – this folder should appear and be populated automatically if you're using a **Glitch in Bio** or **Hello Eleventy** remix and will include the static assets that make up your production website (e.g. HTML, CSS, client side JS, images).
+In most cases you'll need your site output files to be in the `build` folder to deploy to Fastly – this folder should appear and be populated automatically if you're using a **Glitch in Bio** or **Hello Eleventy** remix. It'll include the static assets that make up your production website (e.g. HTML, CSS, client side JS, images).
 
 Check your `build` folder for your output files. If they're there you're good to move forward.
 
@@ -108,15 +108,15 @@ You can try running the Compute app you'll be deploying to Fastly in the Codespa
 bash _migrate/serve.sh
 ```
 
-> ⚠️ _Note that you can only run the test server once per session in a Codespace because it'll attempt to reuse the same port number._
+> ⚠️ Note that you can only run the test server once per session in a Codespace because it'll attempt to reuse the same port number.
 
 The Fastly tooling will attempt to scaffold a new Compute app for your project and run it in the Codespace – it might take a couple of minutes but you should see a preview of your site open in the Codespace. 
 
-You should see the preview URL change to reflect the port number for your Compute app which will be `7676`.
+The preview URL will change to reflect the port number for your Compute app: `7676`.
 
 Your Compute app code will be in the `compute-js` folder, and the `fastly.toml` file will update with your Fastly service details as you execute the commands.
 
-> 🏗️ _If your Compute app doesn't successfully serve the first time it's best to delete the `compute-js` folder before trying again._
+> 🏗️ If your Compute app doesn't successfully serve the first time, it's best to delete the `compute-js` folder before trying again.
 
 ## Deploy your site
 
@@ -139,13 +139,13 @@ Back in your Codespace, click into the textfield at the top of the editor and ty
   
 In the notifications area at the bottom right of your codespace, you should see a prompt to reload for the new environment variable, so go ahead and click that (otherwise click the little bell 🔔 icon to check for the message).
 
-> You can alternatively add your API key in the repo **Settings** > **Secrets and variables** > **Codespaces**.
+> 🔑 You can alternatively add your API key in the repo **Settings** > **Secrets and variables** > **Codespaces**.
 
 ![reload codespace](https://github.com/user-attachments/assets/54bd53b2-a8a6-43df-979b-2bed6a980bd8)
 
-> _When you reload your codespace you might see an error about a port already being in use – this happens in Vite projects like Glitch in Bio. You can fix it by removing the `server` object from your `vite.config.js` file, or you can just ignore it._ 💅
+> _When you reload your codespace you might see an error about a port already being in use – this happens in Vite projects like Glitch in Bio. You can fix it by removing the `server` object from your `vite.config.js` file, or you can just ignore it._ 🌤️
 
-Go ahead and click the **🚀 Publish** button at the bottom of the Codespace editor, confirm you want to proceed with a `y` and watch the Terminal for the output! 
+Go ahead and click the **🚀 Publish** button at the bottom of the Codespace editor, confirm you want to proceed with a `y` and watch the Terminal for the output – it might take a couple of minutes.
 
 ![follow link](https://github.com/user-attachments/assets/72ab3767-aaa1-4fab-ab97-103b407ff400)
 
@@ -153,11 +153,13 @@ Hopefully you see an `edgecompute.app` domain that returns your site – go ahea
 
 ![deployed app](https://github.com/user-attachments/assets/a6c2210b-bdf0-4256-bcd9-67052c15d9f9)
 
-> ⚠️ Note that if you go through this flow for more than one site you’ll need to change the KV Store name in your `_migrate/publish.sh` script to avoid duplicates – you also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names before deploying.
+> 👯 Note that if you go through this flow for more than one site, you’ll need to change the KV Store name to avoid duplicates – the Fastly tooling will prompt you to choose a different name during deployment, but you can alternatively change it in your `_migrate/publish.sh` script.
+>
+> You also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names, because this is where the service name is pulled from!
 
 ## Working on your project
 
-If you make edits to your project in the Codespace, remember to commit them to your GitHub repo as the Codespace will only store them for a limited period of time. If you make edits to the repo, you'll need to sync your Codespace to pull them in. Check out the [GitHub docs](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace) for tips on working with your repository in a Codespace.
+If you make edits to your project in the Codespace, remember to commit them to your GitHub repo, as the Codespace will only store them for a limited period of time. If you make edits to the repo, you'll need to sync your Codespace to pull them in. Check out the [GitHub docs](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace) for tips on working with your repository in a Codespace.
 
 ## If you’re using a domain through Fastly 
 
