@@ -25,7 +25,7 @@ To use the scripts from this project in a repo you exported from Glitch:
 * Copy the [`.devcontainer`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/.devcontainer) and [`_migrate`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/tree/main/_migrate) folders and their contents into your repo (grab this file [`MIGRATE.md`](https://github.com/glitchdotcom/glitch-static-site-to-fastly/blob/main/MIGRATE.md) as well if you want to read the steps in the Codespace)
   * _This might be easiest by cloning the repos locally and copying the files across too_
 
-> 💅 If you're clever with git and comfortable on the command line there is likely a more convenient flow.
+> 💅 If you're clever with git and comfortable on the command line there is likely a more convenient flow – [please share it](https://github.com/glitchdotcom/glitch-static-site-to-fastly/issues/2)!
 
 In your downloaded / exported Glitch app, remove some files that might appear in your export and could complicate subsequent steps, for example:
   * `package-lock.json`
