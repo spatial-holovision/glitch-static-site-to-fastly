@@ -27,9 +27,14 @@ To use the scripts from this project in a repo you exported from Glitch:
 
 > 💅 If you're clever with git and comfortable on the command line there is likely a more convenient flow – [please share it](https://github.com/glitchdotcom/glitch-static-site-to-fastly/issues/2)!
 
-In your downloaded / exported Glitch app, remove some files that might appear in your export and could complicate subsequent steps, for example:
+In your downloaded / exported Glitch app, remove some files and folders that might appear in your export and could complicate subsequent steps, for example:
   * `package-lock.json`
   * `shrinkwrap.yaml`
+  * `.node-gyp`
+  * `build/`
+  * `.cache/` 
+  * `.config/` 
+  * `.data/`
   * _Check for any other files you think you can remove, including those beginning with `.` that may be hidden by default_
 
 ### Static sites with no build process
