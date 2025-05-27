@@ -37,6 +37,8 @@ In your downloaded / exported Glitch app, remove some files and folders that mig
   * `.data/`
   * _Check for any other files you think you can remove, including those beginning with `.` that may be hidden by default_
 
+Make sure you keep any config files for your build process like `vite.config.js` and `.eleventy.js`.
+
 ### Static sites with no build process
 
 If your site does not contain a `package.json` file, for example if it's a **Hello Website** remix, you'll need to add a couple of files to use a build process, which will add your website files to an output folder:
@@ -160,7 +162,7 @@ Hopefully you see an `edgecompute.app` domain that returns your site – go ahea
 
 > 👯 Note that if you go through this flow for more than one site, you’ll need to change the KV Store name to avoid duplicates – the Fastly tooling will prompt you to choose a different name during deployment, but you can alternatively change it in your `_migrate/publish.sh` script.
 >
-> You also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names, because this is where the service name is pulled from!
+> You also won't be able to use the same name for more than one Fastly service, so make sure your `package.json` files use unique names, because this is where the service name is pulled from! If your deployment goes wrong for this reason, delete the `compute-js` folder and try again after changing the name in your `package.json`.
 
 ## Working on your project
 
