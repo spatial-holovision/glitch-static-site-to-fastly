@@ -9,20 +9,8 @@
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "portsAttributes": {
-    "3000-3010": {
+    "3000-9000": {
       "label": "Site",
-      "onAutoForward": "openPreview"
-    },
-    "5173-5180": {
-      "label": "Site",
-      "onAutoForward": "openPreview"
-    },
-    "8080-8090": {
-      "label": "Site",
-      "onAutoForward": "openPreview"
-    },
-    "7676": {
-      "label": "Compute",
       "onAutoForward": "openPreview"
     }
   },
